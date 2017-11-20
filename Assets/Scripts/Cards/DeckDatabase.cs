@@ -9,16 +9,15 @@ public class DeckDatabase : MonoBehaviour {
 	//// Aqui añado cartas en la interfaz de creador de Deck, aparece en la instancia del juego para agregar estas cartas al deck
     private void Start()
     {
-		Deckdatabase.Add(new Card("Torre Básica", 0, "Una torre con ninguna peculiaridad", Card.CardType.Castle));
-		Deckdatabase.Add(new Card("Torre Básica", 0, "Una torre con ninguna peculiaridad", Card.CardType.Castle));
-		Deckdatabase.Add(new Card("Torre Básica", 0, "Una torre con ninguna peculiaridad", Card.CardType.Castle));
-		Deckdatabase.Add(new Card("Torre OP", 1, "Una torre bastante OP", Card.CardType.Castle));
-		Deckdatabase.Add(new Card("Torre OP", 1, "Una torre bastante OP", Card.CardType.Castle));
-		Deckdatabase.Add(new Card("Torre OP", 1, "Una torre bastante OP", Card.CardType.Castle));
-		Deckdatabase.Add(new Card("Golem de Obsidiana", 2, "Muy duro", Card.CardType.Summon));
-		Deckdatabase.Add(new Card("Golem de Obsidiana", 2, "Muy duro", Card.CardType.Summon));
-		Deckdatabase.Add(new Card("Arquero", 3, "Utiliza 1 Energía menos por ataque", Card.CardType.Summon));
-		Deckdatabase.Add(new Card("Arquero", 3, "Utiliza 1 Energía menos por ataque", Card.CardType.Summon));
-		Deckdatabase.Add(new Card("Manzana de Oro", 4, "Recupera en su totalidad la energía de una Invocación", Card.CardType.Reliq));
+		Deckdatabase.Add(new Card("Tower",       0, "A simple tower",  Card.CardType.Castle ));
+		Deckdatabase.Add(new Card("Tower",       0, "A simple tower",  Card.CardType.Castle ));
+		Deckdatabase.Add(new Card("Tower",       0, "A simple tower",  Card.CardType.Castle ));
+		Deckdatabase.Add(new Card("Obsidian Tower", 1, "A really strong tower",               Card.CardType.Castle));
+		Deckdatabase.Add(new Card("Obsidian Tower", 1, "A really strong tower",               Card.CardType.Castle));
+		Deckdatabase.Add(new Card("Obsidian Golem", 2, "A golem made of obsidian",                            Card.CardType.Summon));
+		Deckdatabase.Add(new Card("Archer",            3, "Uses 1 energy less for each attack",  Card.CardType.Summon));
+		Deckdatabase.Add(new Card("Archer",            3, "Uses 1 energy less for each attack",  Card.CardType.Summon));
+		Deckdatabase.Add(new Card("Archer",            3, "Uses 1 energy less for each attack",  Card.CardType.Summon));
+		Deckdatabase.Add (new Card ("Golden Apple", 4, "Restores the energy of a summoning", Card.CardType.Reliq));
     }
 }

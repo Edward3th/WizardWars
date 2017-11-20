@@ -10,12 +10,11 @@ public class CardDatabase : MonoBehaviour {
 	// Pero depende de la forma de cargar la información, quizás si
     private void Start()
     {
-		totalCards.Add(new Card("Torre Básica",       0, "Una torre con ninguna peculiaridad",  Card.CardType.Castle ));
-		totalCards.Add(new Card("Torre de Obsidiana", 1, "Una torre bastante OP",               Card.CardType.Castle));
-		totalCards.Add(new Card("Golem de Obsidiana", 2, "Muy duro",                            Card.CardType.Summon));
-		totalCards.Add(new Card("Arquero",            3, "Utiliza 1 Energía menos por ataque",  Card.CardType.Summon));
-		totalCards.Add(new Card("Manzana de Oro",     4, "Recupera en su totalidad la energía de una Invocación", Card.CardType.Reliq));
-    	
+		totalCards.Add(new Card("Tower",       0, "A simple tower",  Card.CardType.Castle ));
+		totalCards.Add(new Card("Obsidian Tower", 1, "A really strong tower",               Card.CardType.Castle));
+		totalCards.Add(new Card("Obsidian Golem", 2, "A golem made of obsidian",                            Card.CardType.Summon));
+		totalCards.Add(new Card("Archer",            3, "Uses 1 energy less for each attack",  Card.CardType.Summon));
+		totalCards.Add (new Card ("Golden Apple", 4, "Restores the energy of a summoning", Card.CardType.Reliq));
 	}
 
 }

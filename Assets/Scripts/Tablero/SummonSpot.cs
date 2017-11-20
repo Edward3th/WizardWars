@@ -10,7 +10,7 @@ public class SummonSpot : MonoBehaviour {
 
 	void OnMouseDown() {
 
-		if (hand.draggingCard && Input.GetMouseButton (0)) {
+		if (hand.draggingCard && Input.GetMouseButton (0) && hand.draggedCard.cardType == Card.CardType.Summon ) {
 			Summon = hand.draggedCard;
 			Debug.Log ("A Summon was placed");
 			hand.hand[hand.prevIndex] = new Card ();

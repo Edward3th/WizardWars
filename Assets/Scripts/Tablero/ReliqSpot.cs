@@ -10,7 +10,7 @@ public class ReliqSpot : MonoBehaviour {
 
 	void OnMouseDown() {
 
-		if (hand.draggingCard && Input.GetMouseButton (0)) {
+		if (hand.draggingCard && Input.GetMouseButton (0) && hand.draggedCard.cardType == Card.CardType.Reliq) {
 			Reliq = hand.draggedCard;
 			Debug.Log ("A Reliq was placed");
 			hand.hand[hand.prevIndex] = new Card ();
