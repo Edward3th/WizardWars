@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Cards\DeckDatabase.cs" />
      <Compile Include="Assets\Scripts\Cards\Hand.cs" />
      <Compile Include="Assets\Scripts\Cards\InGameDeck.cs" />
+     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
      <Compile Include="Assets\Scripts\Tablero\ReliqSpot.cs" />
      <Compile Include="Assets\Scripts\Tablero\SummonSpot.cs" />
      <Compile Include="Assets\Scripts\Tablero\TowerSpot.cs" />

@@ -10,7 +10,7 @@ public class TowerSpot : MonoBehaviour {
 
 	void OnMouseDown() {
 
-		if (hand.draggingCard && Input.GetMouseButton (0) && hand.draggedCard.cardType == Card.CardType.Castle) {
+		if (hand.draggingCard && Input.GetMouseButton (0) && hand.draggedCard.cardType == Card.CardType.Tower) {
 			Tower = hand.draggedCard;
 			Debug.Log ("A tower was placed");
 			hand.hand[hand.prevIndex] = new Card ();

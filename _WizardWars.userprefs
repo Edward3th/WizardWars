@@ -1,15 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tablero\ReliqSpot.cs">
-    <Files>
-      <File FileName="Assets\Scripts\Cards\CardDatabase.cs" Line="11" Column="25" />
-      <File FileName="Assets\Scripts\Cards\DeckDatabase.cs" Line="16" Column="37" />
-      <File FileName="Assets\Scripts\Tablero\SummonSpot.cs" Line="13" Column="105" />
-      <File FileName="Assets\Scripts\Cards\Card.cs" Line="13" Column="20" />
-      <File FileName="Assets\Scripts\Tablero\ReliqSpot.cs" Line="16" Column="44" />
-      <File FileName="Assets\Scripts\Tablero\TowerSpot.cs" Line="17" Column="30" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
