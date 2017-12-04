@@ -19,7 +19,10 @@ public class Hand : MonoBehaviour {
 	public bool drawingCard = false; // En el script controlador de turno, es true en la drawing fase; 
 
 	private float w = Screen.width;
-	private float h = Screen.height; 
+	private float h = Screen.height;
+
+	private bool showTooltip;
+	private string tooltip;
 
 
 	void Start()
@@ -55,12 +58,21 @@ public class Hand : MonoBehaviour {
 
 	void OnGUI()
 	{
+		tooltip = "";
 		if (showHand) {
 			DrawHand ();
 		}
 
+
+		if (showTooltip) {
+		
+			GUI.Box (new Rect (Event.current.mousePosition.x,Event.current.mousePosition.y-200,200,200), tooltip);
+		}
+			
+
 		if (draggingCard) {
-			GUI.DrawTexture (new Rect (Event.current.mousePosition.x, Event.current.mousePosition.y, 50, 50), prueba);
+			showTooltip = false;
+			GUI.DrawTexture (new Rect (Event.current.mousePosition.x, Event.current.mousePosition.y, 140, 200), prueba);
 		}
 
 		if (drawingCard) 
@@ -92,6 +104,8 @@ public class Hand : MonoBehaviour {
 				GUI.DrawTexture(slotRect, prueba);
 				if (slotRect.Contains(e.mousePosition))
 				{
+					CreateTooltip (slots [i]);
+					showTooltip = true;
 					if (e.button == 0 && e.type == EventType.mouseDrag && !draggingCard)
 					{
 						draggingCard = true;
@@ -108,6 +122,10 @@ public class Hand : MonoBehaviour {
 						draggedCard = null;
 					}
 
+				}
+
+				if (tooltip == "") {
+					showTooltip = false;
 				}
 			}
 			else // ESTE ELSE ES PARA CAMBIAR CON ESPACIOS VACIOS
@@ -127,6 +145,11 @@ public class Hand : MonoBehaviour {
 			}
 		}
 
+	string CreateTooltip(Card card)
+	{
+		tooltip = card.cardName + "\n\n\n" + card.cardDesc ;
+		return tooltip;
+	}
 
 	void DrawCardFromDeck()
 	{

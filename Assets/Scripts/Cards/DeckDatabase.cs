@@ -11,6 +11,7 @@ public class DeckDatabase : MonoBehaviour {
 
     private void Start()
     {
+
 		Deckdatabase.Add(new Card("Tower",          0,"",  Card.CardType.Tower));
 		Deckdatabase.Add(new Card("Tower",          0,"",  Card.CardType.Tower));
 		Deckdatabase.Add(new Card("Tower",          0,"",  Card.CardType.Tower));
