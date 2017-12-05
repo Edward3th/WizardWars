@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_TableroAntiguo.unity
+- path: Assets/_TableroNuevo.unity
   isLoaded: 1
   isActive: 1

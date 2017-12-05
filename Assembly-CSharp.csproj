@@ -58,13 +58,11 @@
      <Compile Include="Assets\Scripts\Cards\DeckDatabase.cs" />
      <Compile Include="Assets\Scripts\Cards\Hand.cs" />
      <Compile Include="Assets\Scripts\Cards\InGameDeck.cs" />
-     <Compile Include="Assets\Scripts\Deck\Deck.cs" />
+     <Compile Include="Assets\Scripts\Deck Builder\Deck.cs" />
      <Compile Include="Assets\Scripts\Menu\Menu.cs" />
      <Compile Include="Assets\Scripts\Tablero\ReliqSpot.cs" />
      <Compile Include="Assets\Scripts\Tablero\SummonSpot.cs" />
-     <Compile Include="Assets\Scripts\Tablero\tempSummonController.cs" />
      <Compile Include="Assets\Scripts\Tablero\TowerSpot.cs" />
-     <Compile Include="Assets\Scripts\TurnController.cs" />
      <None Include="Assets\Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
      <None Include="Assets\Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
