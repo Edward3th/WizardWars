@@ -11,33 +11,25 @@ public class SummonSpot : MonoBehaviour {
 
 	void OnMouseDown() {
 
+		// E3: Just check everything
 		if (hand.draggingCard && Input.GetMouseButton (0) && hand.draggedCard.cardType == Card.CardType.Summon && Summon.cardName == "") {
 			PlaySummon();
 		}
-
-		if( Input.GetMouseButton (1))
-		{
-			Debug.Log ("Deplaying card");
-			DePlay ();
-		}
+			
 	}		
 
 	void PlaySummon()
 	{
 		Summon = hand.draggedCard;
 		Debug.Log ("A Summon was placed");
+
+		//E3: these lines are for freeing the space the card played used in hand script.
 		hand.hand[hand.prevIndex] = new Card ();
 		hand.draggingCard = false;
 		hand.draggedCard = null;
+
 		/// tempSummon can be easily changed to Summon.cardModel
 		Instantiate (tempSummon, transform.position, Quaternion.identity);
-	}
-
-	void DePlay()
-	{
-		Summon = new Card ();
-		Destroy (tempSummon);
-		Debug.Log ("Summon autodestroyed");
 	}
 
 

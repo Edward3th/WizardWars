@@ -5,7 +5,7 @@ using UnityEngine;
 public class CardDatabase : MonoBehaviour {
 
     public List<Card> totalCards = new List<Card>();
-    // Total card database
+    // E3: Total card database, i think this remains this way. Maybe we have to create a build card system in the editor.
     private void Start()
     {
 		totalCards.Add(new Card("Tower",          0,"",  Card.CardType.Tower));

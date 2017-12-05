@@ -5,17 +5,21 @@ using UnityEngine;
 public class MapCameraController : MonoBehaviour {
 
 	public Transform camController;
+
+	private Vector3 initialPos;
+	private Quaternion initialRot;
 	float rotationSpeed = 5.0f;
 	float moveSpeed = 20.0f;
 
 	void Start () {
-		Transform inTrans = camController;
+		initialPos = camController.position;
+		initialRot = camController.rotation;
 	}
 	
 
 	void Update () {
 
-
+	
 		transform.position = new Vector3(
 			Mathf.Clamp(transform.position.x,-42.0f,42.0f),
 			transform.position.y,
@@ -43,7 +47,7 @@ public class MapCameraController : MonoBehaviour {
 
 		if (Input.GetButtonDown("reset"))
 		{
-			camController.SetPositionAndRotation(new Vector3(30,16,16), Quaternion.identity);
+			camController.SetPositionAndRotation(initialPos,initialRot);
 		}
 	}
 }

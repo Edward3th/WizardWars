@@ -5,10 +5,13 @@ using UnityEngine;
 public class Deck {
 
 	public List<Card> deck = new List<Card>();
+	public int deckID;
+	public string deckName;
 
-
-	public Deck(List<Card> adeck)
+	public Deck(List<Card> _deck,int _deckID,string _deckName)
 	{
-		deck = adeck;
+		deck = _deck;
+		deckID = _deckID;
+		deckName = _deckName;
 	}
 }

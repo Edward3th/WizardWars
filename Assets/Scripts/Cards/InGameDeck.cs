@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class InGameDeck : MonoBehaviour {
 
-	public List<Card> ingameDeck = new List<Card> (); //DECK para pasar a Hand
-	public DeckDatabase database; // Trae el script que contiene el deck no modificable
+	public List<Card> ingameDeck = new List<Card> (); //DECK for hand building
+	public DeckDatabase database; // Brings the deck database from deck building
 	public bool shuffle = true;
-	//Aquí se almacenan las cartas del deck in.game
-	void Start()// Deck de Cartas. Las retiro al sacarla y pueden revolvers
+
+	void Start()
 	{
 		GetDeckFromData ();
 		ShuffleDeck();
@@ -17,16 +17,15 @@ public class InGameDeck : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetMouseButton (1)) {
-			shuffle = true;
-		}
-		if (shuffle) {
+		if (shuffle && Input.GetMouseButton (1)) {
 			ShuffleDeck ();
+			Debug.Log ("Shuffling deck");
+			shuffle = false;
 		}
 
 	}
 
-	/// Funciones
+	/// METHODS
 
 	void GetDeckFromData()
 	{
@@ -39,7 +38,8 @@ public class InGameDeck : MonoBehaviour {
 	}
 
 
-	void ShuffleDeck() // Revuelve las cartas del deck
+
+	void ShuffleDeck()
 	{
 		List<Card> temp = new List<Card>();
 		temp.Add (new Card ());

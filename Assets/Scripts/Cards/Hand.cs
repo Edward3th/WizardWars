@@ -16,7 +16,7 @@ public class Hand : MonoBehaviour {
 	public Card draggedCard;
 	public int prevIndex;
 
-	public bool drawingCard = false; // En el script controlador de turno, es true en la drawing fase; 
+	public bool drawingCard = false;  
 
 	private float w = Screen.width;
 	private float h = Screen.height;
@@ -27,6 +27,7 @@ public class Hand : MonoBehaviour {
 
 	void Start()
 	{
+		//E3: This initialize the hand
 		for (int i = 0; i < slotsX; i++)
 		{
 			slots.Add(new Card());
@@ -36,11 +37,13 @@ public class Hand : MonoBehaviour {
 
 	private void Update()
 	{
-		
+
+		//E3: This show the hand and deck interface
 		if (Input.GetButtonDown("i"))
 		{
 			showHand = !showHand;
-			if (draggingCard) // Para el glitch de dragear y sacar el inventario
+			//E3: This is needed because a glitch
+			if (draggingCard) 
 			{
 				hand[prevIndex] = draggedCard;
 				draggingCard = false;
@@ -48,17 +51,22 @@ public class Hand : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetMouseButtonDown (0)) // Este if usa la idea de fase de turno. (Soluciona el problema del doble click al tener que comprobar dos veces que está clickeado)
+		//E3: This is needed to draw a card plus the mouse position on OnGUI
+		if (Input.GetMouseButtonDown (0)) 
 		{
 			drawingCard = true;
 		}
+
+
 
 	}
 
 
 	void OnGUI()
 	{
+
 		tooltip = "";
+
 		if (showHand) {
 			DrawHand ();
 		}
@@ -85,27 +93,30 @@ public class Hand : MonoBehaviour {
 	
 		}
 	}
-	// FUNCIONES /////////////////////////////////////////////
+
+
+	// METHODS /////////////////////////////////////////////
 
 	void DrawHand()
 	{
 		Event e = Event.current;
 		int i = 0;
-		GUI.Box(new Rect(w * 0.01f, h * 0.69f, w * 0.98f, h * 0.3f), ""); //UI BAK
+		GUI.Box(new Rect(w * 0.01f, h * 0.69f, w * 0.98f, h * 0.3f), ""); //UI BACKGROUND
 		GUI.Box(new Rect(w * 0.75f, h * 0.71f, w * 0.12f, h * 0.26f), ""); // DeckSlot
 		for (int x = 0; x < slotsX; x++)
 		{
 			float step = x * w * 0.13f;
-			Rect slotRect = new Rect (step + w * 0.03f, h * 0.71f, w * 0.12f, h * 0.26f); // CardsSlot
+			Rect slotRect = new Rect (step + w * 0.03f, h * 0.71f, w * 0.12f, h * 0.26f); // CardsSlots
 			GUI.Box(new Rect(slotRect),"");
 			slots[i] = hand[i];
 			if (slots[i].cardName != null)
 			{
-				GUI.DrawTexture(slotRect, prueba);
+				GUI.DrawTexture(slotRect, prueba); // here instead of "prueba" draggedCard.cardSprite
 				if (slotRect.Contains(e.mousePosition))
 				{
 					CreateTooltip (slots [i]);
 					showTooltip = true;
+
 					if (e.button == 0 && e.type == EventType.mouseDrag && !draggingCard)
 					{
 						draggingCard = true;

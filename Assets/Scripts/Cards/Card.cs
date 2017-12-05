@@ -19,7 +19,7 @@ public class Card {
     }
 
 
-	/// Temporary constructor
+	/// E3: This constructor until there are models and sprite for cards
 	public Card(string name, int ID, string desc, CardType type)
     {
         cardName = name;
@@ -28,7 +28,6 @@ public class Card {
         cardType = type;	
     }
 
-	/// Use this constructor when things are better
 	public Card(string name, int ID, string desc, CardType type, Texture2D texture, GameObject model, int vitality)
 	{
 		cardName =     name;
@@ -40,8 +39,7 @@ public class Card {
 		cardVitality = vitality;
 
 	}
-
-
+		
 	// Void Card
 	public Card()
 	{

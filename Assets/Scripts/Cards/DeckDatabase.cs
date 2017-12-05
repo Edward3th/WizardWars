@@ -6,7 +6,7 @@ using UnityEngine;
 public class DeckDatabase : MonoBehaviour {
 
     public List<Card> Deckdatabase = new List<Card>();
-
+	// E3: Use this line when we have a deck builder
 	// deckdatabase = chosen deck;
 
     private void Start()
